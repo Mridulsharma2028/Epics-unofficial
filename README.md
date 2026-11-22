@@ -3,7 +3,7 @@
 Full-stack implementation of the **AarogyaNet AI Prototype Blueprint**:
 a Next.js frontend and a FastAPI backend, wired together end-to-end.
 
-```
+```text
 AarogyaNet-AI/
 ├── frontend/        Next.js (App Router) — see frontend/README.md
 ├── backend/         FastAPI — see backend/README.md
