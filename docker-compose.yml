@@ -1,0 +1,32 @@
+# One-command full-stack run: `docker compose up --build`
+# Frontend -> http://localhost:3000
+# Backend  -> http://localhost:8000 (docs at /docs)
+#
+# Uses SQLite inside the backend container by default (see backend/.env.example).
+# Swap DATABASE_URL below for a Postgres service if you add one.
+version: "3.9"
+
+services:
+  backend:
+    build: ./backend
+    ports:
+      - "8000:8000"
+    environment:
+      DATABASE_URL: sqlite:///./aarogyanet.db
+      JWT_SECRET_KEY: dev-only-change-me-before-any-real-deployment
+      CORS_ORIGINS: http://localhost:3000,http://127.0.0.1:3000
+      SEED_DEMO_DATA: "true"
+    volumes:
+      - backend-data:/app
+
+  frontend:
+    build: ./frontend
+    ports:
+      - "3000:3000"
+    environment:
+      NEXT_PUBLIC_API_BASE_URL: http://localhost:8000/api
+    depends_on:
+      - backend
+
+volumes:
+  backend-data:

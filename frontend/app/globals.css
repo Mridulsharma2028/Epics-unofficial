@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+
+.arn-scroll::-webkit-scrollbar { width: 6px; }
+.arn-scroll::-webkit-scrollbar-thumb { background: #DED5BC; border-radius: 4px; }
+
+@keyframes arnPulse { 0%, 100% { opacity: 1; } 50% { opacity: .35; } }
+.arn-pulse { animation: arnPulse 1.6s ease-in-out infinite; }
+
+@keyframes arnRise { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: translateY(0); } }
+.arn-rise { animation: arnRise .35s ease-out both; }
+
+button { cursor: pointer; }
