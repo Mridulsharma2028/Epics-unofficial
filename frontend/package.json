@@ -11,20 +11,24 @@
     "test": "vitest run"
   },
   "dependencies": {
-    "next": "14.2.5",
+    "lucide-react": "0.383.0",
+    "next": "^15.5.29",
     "react": "18.3.1",
     "react-dom": "18.3.1",
-    "lucide-react": "0.383.0",
     "recharts": "2.12.7"
   },
   "devDependencies": {
-    "typescript": "5.5.4",
-    "@types/node": "20.14.15",
+    "@types/node": "^24.19.2",
     "@types/react": "18.3.3",
     "@types/react-dom": "18.3.0",
-    "tailwindcss": "3.4.7",
-    "postcss": "8.4.40",
     "autoprefixer": "10.4.19",
-    "vitest": "1.6.0"
+    "postcss": "8.5.33",
+    "tailwindcss": "3.4.7",
+    "typescript": "5.5.4",
+    "vite": "^6.4.4",
+    "vitest": "^5.1.1"
+  },
+  "overrides": {
+    "postcss": "8.5.33"
   }
 }

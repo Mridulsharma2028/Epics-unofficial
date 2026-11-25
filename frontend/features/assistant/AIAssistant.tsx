@@ -19,7 +19,7 @@ export function AIAssistant() {
   const { t } = useApp();
   const router = useRouter();
   const [symptoms, setSymptoms] = useState<string[]>([]);
-  const [duration, setDuration] = useState(t.dur2);
+const [duration, setDuration] = useState<string>(t.dur2);
   const [result, setResult] = useState<RiskAssessment | null>(null);
   const all = [t.symFever, t.symCough, t.symBodyPain, t.symBreathlessness, t.symFatigue, t.symDiarrhoea];
   const toggle = (s: string) => setSymptoms((p) => (p.includes(s) ? p.filter((x) => x !== s) : [...p, s]));

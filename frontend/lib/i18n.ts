@@ -264,4 +264,4 @@ export const STR = {
   },
 } as const;
 
-export type TDict = typeof STR["en"];
+export type TDict = { [K in keyof typeof STR["en"]]: string };
